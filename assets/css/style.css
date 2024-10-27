@@ -1,0 +1,68 @@
+:root {
+    --green: #133d35;
+    --light: #fff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    font-size: 16px;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    background-color: var(--green);
+    color: var(--light);
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+main {
+    display: flex;
+    flex: 0.5 1 0;
+    align-items: stretch;
+}
+
+aside {
+    flex: 1;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 5px ridge var(--green);
+    border-radius: 30px;
+}
+
+section {
+    flex: 2;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    padding: 2rem;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.flex-item {
+    border: 5px ridge var(--green);
+    border-radius: 30px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 0.5em;
+    background-size: 150%;
+    font-size: 0.9rem;
+}
+
+.flex-item.hobby {
+    flex: 1 1 45%;
+}
