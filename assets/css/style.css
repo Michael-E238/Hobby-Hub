@@ -1,6 +1,7 @@
 :root {
     --green: #133d35;
     --light: #fff;
+    --hover: oklch(var(--p));
 }
 
 body {
@@ -32,12 +33,13 @@ main {
 }
 
 aside {
-    flex: 1;
+    flex: 0.75;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     border: 5px ridge var(--green);
     border-radius: 30px;
+
 }
 
 section {
@@ -65,4 +67,10 @@ section {
 
 .flex-item.hobby {
     flex: 1 1 45%;
+
+}
+
+.flex-item.hobby:hover {
+    background-color: var(--hover);
+    color: var(--light);
 }
