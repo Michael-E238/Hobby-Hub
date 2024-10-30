@@ -4,27 +4,48 @@
 <head>
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <title> Group Project 1 HTML Draft </title>
-    <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <script src="./assets/js/script.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
     <header>
         <h1> Hobby Hub </h1>
     </header>
+head
+    <main class="drawer">
 
-    <main>
-
-        <aside class="flex-item">
-            <ul>
-                <li> Price Range </li>
-                <li> Recommendations </li>
-                <li> Activity Type </li>
-                <li> Commitment </li>
-            </ul>
-        </aside>
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+              <!-- Page content here -->
+              <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
+            </div>
+            <div class="drawer-side">
+              <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+              <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                <!-- Sidebar content here -->
+                <form id="hobby-form">
+                    <div>
+                        <li> Price Range: </li>
+                            <input type="checkbox" class="dollar3">$
+                            <input type="checkbox" class="dollar2">$$
+                            <input type="checkbox" class="dollar3">$$$
+                        <li> Activity Type: </li>
+                            <input type="checkbox" class="indoors">Indoor
+                            <input type="checkbox" class="outdoors">Outdoor
+                        <li> Commitment: </li>
+                            <input type="checkbox" class="time1" name="time1">⏰
+                            <input type="checkbox" class="time2" name="time2">⏰⏰
+                            <input type="checkbox" class="time3" name="time3">⏰⏰⏰
+                        <li><button type="submit">Submit</button></li>
+                    </div>
+                </form>
+              </ul>
+            </div>
         <section>
-            <div class="flex-item hobby">
+            <div class="flex-item hobby dollar1" id="indoors">
                 <ul>
                     <li> Hobby 1 </li>
                     <li> Hobby 2 </li>
@@ -32,7 +53,7 @@
                     <li> Hobby 4 </li>
                 </ul>
             </div>
-            <div class="flex-item hobby">
+            <div class="flex-item hobby dollar2" >
                 <ul>
                     <li> Hobby 1 </li>
                     <li> Hobby 2 </li>
@@ -40,7 +61,7 @@
                     <li> Hobby 4 </li>
                 </ul>
             </div>
-            <div class="flex-item hobby">
+            <div class="flex-item hobby dollar3">
                 <ul>
                     <li> Hobby 1 </li>
                     <li> Hobby 2 </li>
@@ -48,7 +69,7 @@
                     <li> Hobby 4 </li>
                 </ul>
             </div>
-            <div class="flex-item hobby">
+            <div class="flex-item hobby time1">
                 <ul>
                     <li> Hobby 1 </li>
                     <li> Hobby 2 </li>
@@ -56,7 +77,7 @@
                     <li> Hobby 4 </li>
                 </ul>
             </div>
-            <div class="flex-item hobby">
+            <div class="flex-item hobby time2">
                 <ul>
                     <li> Hobby 1 </li>
                     <li> Hobby 2 </li>
@@ -64,7 +85,7 @@
                     <li> Hobby 4 </li>
                 </ul>
             </div>
-            <div class="flex-item hobby">
+            <div class="flex-item hobby time3">
                 <ul>
                     <li> Hobby 1 </li>
                     <li> Hobby 2 </li>
