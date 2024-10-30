@@ -84,7 +84,29 @@
     </main>
 
     <footer>
+        <form class="flex-item">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" />
 
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" />
+
+            <label for="content">Content:</label>
+            <textarea id="content" name="content" placeholder="What is on your mind?"></textarea>
+            <button class="btn1" onclick="my_modal_1.showModal()">Submit</button>
+        </form>
+
+        <dialog id="my_modal_1" class="modal">
+            <div class="modal-box">
+                <p class="py-4">Thank you for signing up with Hobby Hub!</p>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
     </footer>
 </body>
 
