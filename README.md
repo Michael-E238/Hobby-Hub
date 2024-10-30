@@ -1,7 +1,7 @@
 # Hobby-Hub
 
 * Hobby-Hub is a website dedicated to helping people in search of new hobbies and / or interests.  
-* Whether you're looking for something creative to do, physical activity, or mental stimulation,     
+* Whether you're looking for something creative to do, physical activity, or mental stimulation,
 * Hobby-Hub is here to help make recommendations based on price range, activity type, and commitment.
 
 ## Features
@@ -32,3 +32,29 @@ High-End Options ($$$):
 * Intensive courses or retreats (e.g., cooking schools or photography excursions).
 * Premium equipment (e.g., high-quality cameras or musical instruments).
 * Memberships to exclusive clubs or online platforms offering specialized content.
+
+## Time Commitment
+
+Least Amount of Time: Casual Hobbies
+These hobbies are generally low-commitment and can easily fit into a busy schedule.
+
+* Reading: A few pages or a chapter can be enjoyed in short bursts.
+* Knitting or Crocheting: Small projects or making a few rows can be done quickly.
+* Drawing or Doodling: Quick sketches can be created in a short time frame.
+* Puzzles (jigsaw or crosswords): Can be done in short sessions whenever you have free time.
+
+Regular Amount of Time: Moderate Hobbies
+These hobbies require a moderate time investment, often several hours a week.
+
+* Gardening: Involves weekly maintenance, such as watering and weeding.
+* Cooking or Baking: Preparing meals or trying new recipes can take a few hours each week.
+* Hiking or Walking: Regular outings can take a few hours but can be adjusted based on availability.
+* Learning a Language: Typically involves daily practice of about 30 minutes to an hour.
+
+Most Amount of Time: Intensive Hobbies
+These hobbies often require significant time commitments and long-term dedication.
+
+* Playing a Musical Instrument: Daily practice for skill development can add up to several hours a week.
+* Sports (e.g., soccer, swimming): Regular practice and games can consume multiple hours weekly.
+* Crafting (e.g., woodworking, model building): Complex projects can take many hours to complete.
+* Traveling: Planning and executing trips can require extensive time, depending on the destinations and activities.
