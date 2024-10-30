@@ -5,7 +5,6 @@
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <title> Hobby Hub </title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
     <script
         src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 </head>
@@ -80,7 +79,7 @@
 
         <footer class="container-md mx-auto mt-8">
             <form class="flex">
-                <div class="grid grid-cols-6 grid-rows-4 space-x-4">
+                <div class="grid grid-cols-6 grid-rows-2 space-x-4">
                     <input class="input input-bordered w-full col-start-3 col-end-3" type="text" id="name" name="name"
                         placeholder="Name" />
 
@@ -90,11 +89,9 @@
                         <textarea class="textarea input-bordered w-full max-w-s"
                             placeholder="What is on your mind?"></textarea>
                     </div>
-                    <div class="col-start-3 col-end-5">
-                        <button class="w-full" onclick="my_modal_1.showModal()">Submit</button>
-                    </div>
                 </div>
             </form>
+            <button class=" btn1 w-full mt-8 mb-8" onclick="my_modal_1.showModal()">Submit</button>
 
             <dialog id="my_modal_1" class="modal">
                 <div class="modal-box">
@@ -102,7 +99,7 @@
                     <div class="modal-action">
                         <form method="dialog">
                             <!-- if there is a button in form, it will close the modal -->
-                            <button class="btn">Close</button>
+                            <button class="btn2">Close</button>
                         </form>
                     </div>
                 </div>
