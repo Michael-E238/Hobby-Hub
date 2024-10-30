@@ -3,20 +3,20 @@
 
 <head>
     <meta name="viewport" content="width = device-width, initial-scale = 1">
-    <title> Group Project 1 HTML Draft </title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title> Hobby Hub </title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script
         src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 </head>
 
 <body>
-    <header>
-        <h1> Hobby Hub </h1>
+    <header class="flex justify-between items-center px-8 h-32 mx-8 mb-6">
+        <h1 class="text-2xl"> Hobby Hub </h1>
         <nav>
             <label class="swap swap-rotate">
                 <!-- this hidden checkbox controls the state -->
-                <input type="checkbox" class="theme-controller" value="forest" />
+                <input type="checkbox" class="theme-controller" value="forest" style="opacity:0; position:absolute;" />
 
                 <!-- sun icon -->
                 <svg class="swap-off h-10 w-10 fill-current" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -32,66 +32,68 @@
             </label>
         </nav>
     </header>
-    <div class="flex flex-col justify-center">
+    <div class="flex flex-col items-stretch items-center px-2">
         <main>
-
-            <aside class="flex-item">
-                <ul>
-                    <li> Price Range </li>
-                    <li> Recommendations </li>
-                    <li> Activity Type </li>
-                    <li> Commitment </li>
-                </ul>
-            </aside>
-            <section>
+            <section class="flex justify-center">
                 <div class="grid gap-6 grid-cols-3 grid-rows-2">
-                    <aside class="flex-item hobby">
+                    <div
+                        class="py-10 justify-items-center shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50">
 
                         <h2>Hiking</h2>
                         <img src="https://picsum.photos/seed/picsum/400/300" />
                         <p>Price: $300</p>
 
-                    </aside>
-                    <aside class="flex-item hobby">
+                    </div>
+                    <div
+                        class="py-10  justify-items-center shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50">
                         <h2>Baseball</h2>
                         <img src="https://picsum.photos/id/73/400/300" />
                         <p>Price: $100</p>
-                    </aside>
-                    <aside class="flex-item hobby">
+                    </div>
+                    <div
+                        class="py-10  justify-items-center shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50">
                         <h2>Photography</h2>
                         <img src="https://picsum.photos/id/91/400/300" />
                         <p>Price: $1000</p>
-                    </aside>
-                    <aside class="flex-item hobby">
+                    </div>
+                    <div
+                        class="py-10  justify-items-center shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50">
                         <h2>Video Games</h2>
                         <img src="https://picsum.photos/id/96/400/300" />
                         <p>Price: $600</p>
-                    </aside>
-                    <aside class="flex-item hobby">
+                    </div>
+                    <div
+                        class="py-10  justify-items-center shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50">
                         <h2>Fishing</h2>
                         <img src="https://picsum.photos/id/124/400/300" />
                         <p>Price: $300</p>
-                    </aside>
-                    <aside class="flex-item hobby">
+                    </div>
+                    <div
+                        class="py-10  justify-items-center shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50">
                         <h2>Guitar</h2>
                         <img src="https://picsum.photos/id/145/400/300" />
                         <p>Price: $300</p>
-                    </aside>
+                    </div>
                 </div>
             </section>
         </main>
 
-        <footer class="container-md mx-auto">
-            <form class="flex-item">
-                <input class="input input-bordered w-full max-w-xs" type="text" id="name" name="name"
-                    placeholder="Name" />
+        <footer class="container-md mx-auto mt-8">
+            <form class="flex">
+                <div class="grid grid-cols-6 grid-rows-4 space-x-4">
+                    <input class="input input-bordered w-full col-start-3 col-end-3" type="text" id="name" name="name"
+                        placeholder="Name" />
 
-                <input class="input input-bordered w-full max-w-xs" type="text" id="email" name="email"
-                    placeholder="Email" />
-
-                <label for="content">Content:</label>
-                <textarea id="content" name="content" placeholder="What is on your mind?"></textarea>
-                <button class="btn1" onclick="my_modal_1.showModal()">Submit</button>
+                    <input class="input input-bordered w-full col-start-4 col-end-4" type="text" id="email" name="email"
+                        placeholder="Email" />
+                    <div class="col-start-3 col-end-5">
+                        <textarea class="textarea input-bordered w-full max-w-s"
+                            placeholder="What is on your mind?"></textarea>
+                    </div>
+                    <div class="col-start-3 col-end-5">
+                        <button class="w-full" onclick="my_modal_1.showModal()">Submit</button>
+                    </div>
+                </div>
             </form>
 
             <dialog id="my_modal_1" class="modal">
