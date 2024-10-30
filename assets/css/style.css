@@ -5,7 +5,6 @@
 }
 
 body {
-    display: flex;
     flex-direction: column;
     line-height: 1.5;
     font-size: 16px;
@@ -73,14 +72,6 @@ section {
 .flex-item.hobby:hover {
     background-color: var(--hover);
     color: var(--light);
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    padding: 2rem;
-    border: 5px ridge var(--green);
-    border-radius: 30px;
 }
 
 #name {

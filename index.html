@@ -4,10 +4,10 @@
 <head>
     <meta name="viewport" content="width = device-width, initial-scale = 1">
     <title> Group Project 1 HTML Draft </title>
-    <link rel="stylesheet" href="./assets/css/reset.css" />
     <link rel="stylesheet" href="./assets/css/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+        src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 </head>
 
 <body>
@@ -32,82 +32,81 @@
             </label>
         </nav>
     </header>
+    <div class="flex flex-col justify-center">
+        <main>
 
-    <main>
+            <aside class="flex-item">
+                <ul>
+                    <li> Price Range </li>
+                    <li> Recommendations </li>
+                    <li> Activity Type </li>
+                    <li> Commitment </li>
+                </ul>
+            </aside>
+            <section>
+                <div class="grid gap-6 grid-cols-3 grid-rows-2">
+                    <aside class="flex-item hobby">
 
-        <aside class="flex-item">
-            <ul>
-                <li> Price Range </li>
-                <li> Recommendations </li>
-                <li> Activity Type </li>
-                <li> Commitment </li>
-            </ul>
-        </aside>
-        <section>
-            <div class="grid gap-6 grid-cols-3 grid-rows-2">
-                <aside class="flex-item hobby">
+                        <h2>Hiking</h2>
+                        <img src="https://picsum.photos/seed/picsum/400/300" />
+                        <p>Price: $300</p>
 
-                    <h2>Hiking</h2>
-                    <img src="https://picsum.photos/seed/picsum/400/300" />
-                    <p>Price: $300</p>
-
-                </aside>
-                <aside class="flex-item hobby">
-                    <h2>Baseball</h2>
-                    <img src="https://picsum.photos/id/73/400/300" />
-                    <p>Price: $100</p>
-                </aside>
-                <aside class="flex-item hobby">
-                    <h2>Photography</h2>
-                    <img src="https://picsum.photos/id/91/400/300" />
-                    <p>Price: $1000</p>
-                </aside>
-                <aside class="flex-item hobby">
-                    <h2>Video Games</h2>
-                    <img src="https://picsum.photos/id/96/400/300" />
-                    <p>Price: $600</p>
-                </aside>
-                <aside class="flex-item hobby">
-                    <h2>Fishing</h2>
-                    <img src="https://picsum.photos/id/124/400/300" />
-                    <p>Price: $300</p>
-                </aside>
-                <aside class="flex-item hobby">
-                    <h2>Guitar</h2>
-                    <img src="https://picsum.photos/id/145/400/300" />
-                    <p>Price: $300</p>
-                </aside>
-            </div>
-
-
-        </section>
-    </main>
-
-    <footer>
-        <form class="flex-item">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" />
-
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" />
-
-            <label for="content">Content:</label>
-            <textarea id="content" name="content" placeholder="What is on your mind?"></textarea>
-            <button class="btn1" onclick="my_modal_1.showModal()">Submit</button>
-        </form>
-
-        <dialog id="my_modal_1" class="modal">
-            <div class="modal-box">
-                <p class="py-4">Thank you for signing up with Hobby Hub!</p>
-                <div class="modal-action">
-                    <form method="dialog">
-                        <!-- if there is a button in form, it will close the modal -->
-                        <button class="btn">Close</button>
-                    </form>
+                    </aside>
+                    <aside class="flex-item hobby">
+                        <h2>Baseball</h2>
+                        <img src="https://picsum.photos/id/73/400/300" />
+                        <p>Price: $100</p>
+                    </aside>
+                    <aside class="flex-item hobby">
+                        <h2>Photography</h2>
+                        <img src="https://picsum.photos/id/91/400/300" />
+                        <p>Price: $1000</p>
+                    </aside>
+                    <aside class="flex-item hobby">
+                        <h2>Video Games</h2>
+                        <img src="https://picsum.photos/id/96/400/300" />
+                        <p>Price: $600</p>
+                    </aside>
+                    <aside class="flex-item hobby">
+                        <h2>Fishing</h2>
+                        <img src="https://picsum.photos/id/124/400/300" />
+                        <p>Price: $300</p>
+                    </aside>
+                    <aside class="flex-item hobby">
+                        <h2>Guitar</h2>
+                        <img src="https://picsum.photos/id/145/400/300" />
+                        <p>Price: $300</p>
+                    </aside>
                 </div>
-            </div>
-        </dialog>
-    </footer>
+            </section>
+        </main>
+
+        <footer class="container-md mx-auto">
+            <form class="flex-item">
+                <input class="input input-bordered w-full max-w-xs" type="text" id="name" name="name"
+                    placeholder="Name" />
+
+                <input class="input input-bordered w-full max-w-xs" type="text" id="email" name="email"
+                    placeholder="Email" />
+
+                <label for="content">Content:</label>
+                <textarea id="content" name="content" placeholder="What is on your mind?"></textarea>
+                <button class="btn1" onclick="my_modal_1.showModal()">Submit</button>
+            </form>
+
+            <dialog id="my_modal_1" class="modal">
+                <div class="modal-box">
+                    <p class="py-4">Thank you for signing up with Hobby Hub!</p>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close</button>
+                        </form>
+                    </div>
+                </div>
+            </dialog>
+        </footer>
+    </div>
 </body>
 
 </html>
