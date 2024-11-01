@@ -9,6 +9,7 @@
         src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 </head>
 
+
 <body>
     <header class="flex justify-between items-center px-8 h-32 mx-8 mb-6">
         <h1 class="text-2xl"> Hobby Hub </h1>
@@ -31,22 +32,43 @@
             </label>
         </nav>
     </header>
-
-
-    <main class="drawer">
-
-            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-            <div class="drawer-content">
-              <!-- Page content here -->
-              <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
-            </div>
-            <div class="drawer-side">
-              <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-              <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+    <div class="drawer navbar bg-base-100">
+        <div class="flex-none">
+            <button class="btn btn-square btn-ghost">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    class="inline-block h-5 w-5 stroke-current">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+        <div class="drawer-content">
+            <!-- Page content here -->
+            <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
+        </div>
+        <div class="drawer-side">
+            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+            <ul class="menu bg-base-100 text-base-content min-h-small w-80 p-4">
                 <!-- Sidebar content here -->
                 <form id="hobby-form">
                     <div>
                         <li> Price Range: </li>
+                        <input type="checkbox" class="dollar3">$
+                        <input type="checkbox" class="dollar2">$$
+                        <input type="checkbox" class="dollar3">$$$
+                        <li> Activity Type: </li>
+                        <input type="checkbox" class="indoors">Indoor
+                        <input type="checkbox" class="outdoors">Outdoor
+                        <li> Commitment: </li>
+                        <input type="checkbox" class="time1" name="time1">⏰
+                        <input type="checkbox" class="time2" name="time2">⏰⏰
+                        <input type="checkbox" class="time3" name="time3">⏰⏰⏰
+                        <li><button type="submit">Submit</button></li>
+                    </div>
+                </form>
+            </ul>
+        </div>
                             <input type="checkbox" class="dollar3">$
                             <input type="checkbox" class="dollar2">$$
                             <input type="checkbox" class="dollar3">$$$
@@ -229,6 +251,168 @@
             </dialog>
         </footer>
     </div>
+    <main class="flex flex-col items-stretch items-center px-2">
+
+        <section class="flex justify-center">
+            <div class="grid gap-10 grid-cols-3 grid-rows-3">
+                <label class="swap swap-flip">
+                    <input type="checkbox" style="opacity:0; position:absolute;" />
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+
+                        <h2>Hiking</h2>
+                        <img src="https://picsum.photos/seed/picsum/400/300" class="rounded" />
+                        <p>Price: $300</p>
+
+                    </div>
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
+                        <p class="text-wrap">asdjkflasdf asdf asdf asdf asf asdf asdf asdf asdf asdf asdf asdf asdf asdf
+                            asdfasdfasdfasd fas dfas df asdfa sdfa sdf asdf asdf asdf asd fasd fasdf asdf asdf asdf asdf
+                            asdf asdf asdf
+                            asdf asdf asdf asdf aszdf asdf asdf aszdf asdf aszdf asdf asdf asdf asdf asdf asdf asdf asdf
+                            asdf asd fasdljfhasldfjkhasldkhjfasldjkfhasldkjfhasdljkfhalsdfhjasd </p>
+
+                    </div>
+                </label>
+                <label class="swap swap-flip">
+                    <input type="checkbox" style="opacity:0; position:absolute;" />
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                        <h2>Baseball</h2>
+                        <img src="https://picsum.photos/id/73/400/300" class="rounded" />
+                        <p>Price: $100</p>
+                    </div>
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
+                        <p class="text-wrap">asdjkflasdf asdf asdf asdf asf asdf asdf asdf asdf asdf asdf asdf asdf asdf
+                            asdfasdfasdfasd fas dfas df asdfa sdfa sdf asdf asdf asdf asd fasd fasdf asdf asdf asdf asdf
+                            asdf asdf asdf
+                            asdf asdf </p>
+
+                    </div>
+                </label>
+                <label class="swap swap-flip">
+                    <input type="checkbox" style="opacity:0; position:absolute;" />
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                        <h2>Photography</h2>
+                        <img src="https://picsum.photos/id/91/400/300" class="rounded" />
+                        <p>Price: $1000</p>
+                    </div>
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
+                        <p>test</p>
+
+                    </div>
+                </label>
+                <label class="swap swap-flip">
+                    <input type="checkbox" style="opacity:0; position:absolute;" />
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                        <h2>Video Games</h2>
+                        <img src="https://picsum.photos/id/96/400/300" class="rounded" />
+                        <p>Price: $600</p>
+                    </div>
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
+                        <p>test</p>
+
+                    </div>
+                </label>
+                <label class="swap swap-flip">
+                    <input type="checkbox" style="opacity:0; position:absolute;" />
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                        <h2>Fishing</h2>
+                        <img src="https://picsum.photos/id/124/400/300" class="rounded" />
+                        <p>Price: $300</p>
+                    </div>
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
+                        <p>test</p>
+
+                    </div>
+                </label>
+                <label class="swap swap-flip">
+                    <input type="checkbox" style="opacity:0; position:absolute;" />
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                        <h2>Guitar</h2>
+                        <img src="https://picsum.photos/id/145/400/300" class="rounded" />
+                        <p>Price: $300</p>
+                    </div>
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
+                        <p>test</p>
+
+                    </div>
+                </label>
+                <label class="swap swap-flip">
+                    <input type="checkbox" style="opacity:0; position:absolute;" />
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                        <h2>Gardening</h2>
+                        <img src="https://picsum.photos/id/292/400/300" class="rounded" />
+                        <p>Price: $300</p>
+                    </div>
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
+                        <p>test</p>
+
+                    </div>
+                </label>
+                <label class="swap swap-flip">
+                    <input type="checkbox" style="opacity:0; position:absolute;" />
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                        <h2>Cooking</h2>
+                        <img src="https://picsum.photos/id/400/400/300" class="rounded" />
+                        <p>Price: $300</p>
+                    </div>
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
+                        <p>test</p>
+
+                    </div>
+                </label>
+                <label class="swap swap-flip">
+                    <input type="checkbox" style="opacity:0; position:absolute;" />
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                        <h2>Bicycling</h2>
+                        <img src="https://picsum.photos/id/409/400/300" class="rounded" />
+                        <p>Price: $300</p>
+                    </div>
+                    <div
+                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
+                        <p>test</p>
+
+                    </div>
+                </label>
+        </section>
+    </main>
+    <footer class="footer bg-base-200 text-base-content p-10">
+        <form>
+            <h6 class="footer-title">Sign Up</h6>
+            <fieldset class="form-control w-80">
+                <input class="input input-bordered" type="text" id="name" name="name" placeholder="Name" />
+                <input type="text" placeholder="username@site.com" class="input input-bordered" />
+                <button class="btn btn-primary" onclick="my_modal_1.showModal()">Submit</button>
+            </fieldset>
+        </form>
+    </footer>
+    <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+            <p class="py-4">Thank you for signing up with Hobby Hub!</p>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn2">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
 </body>
 
 </html>
