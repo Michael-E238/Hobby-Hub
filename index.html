@@ -11,9 +11,44 @@
 
 
 <body>
-    <header class="flex justify-between items-center px-8 h-32 mx-8 mb-6">
-        <h1 class="text-2xl"> Hobby Hub </h1>
-        <nav>
+    <header class="navbar bg-base-200 h-36">
+
+        <div class="navbar-start">
+            <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h7" />
+                    </svg>
+                </div>
+                <ul tabindex="0"
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    <!-- Sidebar content here -->
+                    <form id="hobby-form">
+                        <div>
+                            <li> Price Range: </li>
+                            <input type="checkbox" class="dollar3">$
+                            <input type="checkbox" class="dollar2">$$
+                            <input type="checkbox" class="dollar3">$$$
+                            <li> Activity Type: </li>
+                            <input type="checkbox" class="indoors">Indoor
+                            <input type="checkbox" class="outdoors">Outdoor
+                            <li> Commitment: </li>
+                            <input type="checkbox" class="time1" name="time1">⏰
+                            <input type="checkbox" class="time2" name="time2">⏰⏰
+                            <input type="checkbox" class="time3" name="time3">⏰⏰⏰
+                            <li><button type="submit">Submit</button></li>
+                        </div>
+                    </form>
+                </ul>
+            </div>
+        </div>
+        <div class="navbar-center">
+            <div class="text-2xl"> Hobby Hub </div>
+        </div>
+
+        <nav class="navbar-end">
             <label class="swap swap-rotate">
                 <!-- this hidden checkbox controls the state -->
                 <input type="checkbox" class="theme-controller" value="forest" style="opacity:0; position:absolute;" />
@@ -32,236 +67,195 @@
             </label>
         </nav>
     </header>
-    <div class="drawer navbar bg-base-100">
-        <div class="flex-none">
-            <button class="btn btn-square btn-ghost">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-                    class="inline-block h-5 w-5 stroke-current">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
-                    </path>
-                </svg>
-            </button>
-        </div>
-        <input id="my-drawer" type="checkbox" class="drawer-toggle" />
-        <div class="drawer-content">
-            <!-- Page content here -->
-            <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
-        </div>
-        <div class="drawer-side">
-            <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
-            <ul class="menu bg-base-100 text-base-content min-h-small w-80 p-4">
-                <!-- Sidebar content here -->
-                <form id="hobby-form">
-                    <div>
-                        <li> Price Range: </li>
-                        <input type="checkbox" class="dollar3">$
-                        <input type="checkbox" class="dollar2">$$
-                        <input type="checkbox" class="dollar3">$$$
-                        <li> Activity Type: </li>
-                        <input type="checkbox" class="indoors">Indoor
-                        <input type="checkbox" class="outdoors">Outdoor
-                        <li> Commitment: </li>
-                        <input type="checkbox" class="time1" name="time1">⏰
-                        <input type="checkbox" class="time2" name="time2">⏰⏰
-                        <input type="checkbox" class="time3" name="time3">⏰⏰⏰
-                        <li><button type="submit">Submit</button></li>
-                    </div>
-                </form>
-            </ul>
-        </div>
-    </div>
-    <main class="flex flex-col items-stretch items-center px-2">
 
-        <section class="flex justify-center">
-            <div class="grid gap-10 grid-cols-3 grid-rows-3">
-                <label class="swap swap-flip">
-                    <input type="checkbox" style="opacity:0; position:absolute;" />
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+    <main class="grid gap-10 grid-cols-3 grid-rows-3 items-stretch items-center px-2">
+        <label class="swap swap-flip prose">
+            <input type="checkbox" style="opacity:0; position:absolute;" />
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
 
-                        <h2 class="text-center">Hiking</h2>
-                        <img src="https://picsum.photos/seed/picsum/400/300" class="rounded" />
-                        <p>Price: $300</p>
+                <h2 class="text-center">Hiking</h2>
+                <img src="https://picsum.photos/seed/picsum/400/300" class="rounded" />
+                <p>Price: $300</p>
 
-                    </div>
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
-                        <p>Hiking</p>
-                        <p class="text-wrap">Hiking is a wonderful outdoor activity that involves walking on trails or
-                            paths in natural environments. It's not just a form of exercise; it’s also a way to connect
-                            with nature and explore beautiful landscapes. Not only by yourself but hiking offers the
-                            chance to hike with friends. It creates valuable bonding time with meaningful conversations
-                            and memories. Also friends can encourage each other to tackle challenging sections or try
-                            new
-                            trails.</p>
+            </div>
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on prose">
+                <p>Hiking</p>
+                <p class="text-wrap">Hiking is a wonderful outdoor activity that involves walking on trails or
+                    paths in natural environments. It's not just a form of exercise; it’s also a way to connect
+                    with nature and explore beautiful landscapes. Not only by yourself but hiking offers the
+                    chance to hike with friends. It creates valuable bonding time with meaningful conversations
+                    and memories. Also friends can encourage each other to tackle challenging sections or try
+                    new
+                    trails.</p>
 
-                    </div>
-                </label>
-                <label class="swap swap-flip">
-                    <input type="checkbox" style="opacity:0; position:absolute;" />
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
-                        <h2>Baseball</h2>
-                        <img src="https://picsum.photos/id/73/400/300" class="rounded" />
-                        <p>Price: $100</p>
-                    </div>
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
-                        <p>Baseball</p>
-                        <p class="text-wrap">From playing competitively in a team to in the back yard with a friend or
-                            family. Baseball is a great hobby to get into. If you end up going the competitive route
-                            keep in mind, each team has nine players on the field at a time, so working as a team will
-                            be a skill that you will develop. Now if you end up going a more friendly and relaxing route
-                            playing catch with friends or family will also work on your coordination skills while
-                            creating longtime memories. </p>
+            </div>
+        </label>
+        <label class="swap swap-flip prose">
+            <input type="checkbox" style="opacity:0; position:absolute;" />
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                <h2>Baseball</h2>
+                <img src="https://picsum.photos/id/73/400/300" class="rounded" />
+                <p>Price: $100</p>
+            </div>
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on prose">
+                <p>Baseball</p>
+                <p class="text-wrap">From playing competitively in a team to in the back yard with a friend or
+                    family. Baseball is a great hobby to get into. If you end up going the competitive route
+                    keep in mind, each team has nine players on the field at a time, so working as a team will
+                    be a skill that you will develop. Now if you end up going a more friendly and relaxing route
+                    playing catch with friends or family will also work on your coordination skills while
+                    creating longtime memories. </p>
 
-                    </div>
-                </label>
-                <label class="swap swap-flip">
-                    <input type="checkbox" style="opacity:0; position:absolute;" />
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
-                        <h2>Photography</h2>
-                        <img src="https://picsum.photos/id/91/400/300" class="rounded" />
-                        <p>Price: $1000</p>
-                    </div>
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
-                        <p>Photography</p>
-                        <p class="text-wrap">Diving into this hobby will probably cost you a few thousand dollars to get
-                            started from buying your equipment like lenses, cameras, and accessories to also planning
-                            trips to the locations leading to thrilling experiences and discoveries. This hobby will
-                            push you out of your comfort zone, wether it’s trying new techniques, tackling difficult
-                            lighting, or capturing fast-moving subjects. </p>
+            </div>
+        </label>
+        <label class="swap swap-flip prose">
+            <input type="checkbox" style="opacity:0; position:absolute;" />
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                <h2>Photography</h2>
+                <img src="https://picsum.photos/id/91/400/300" class="rounded" />
+                <p>Price: $1000</p>
+            </div>
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on prose">
+                <p>Photography</p>
+                <p class="text-wrap">Diving into this hobby will probably cost you a few thousand dollars to get
+                    started from buying your equipment like lenses, cameras, and accessories to also planning
+                    trips to the locations leading to thrilling experiences and discoveries. This hobby will
+                    push you out of your comfort zone, wether it’s trying new techniques, tackling difficult
+                    lighting, or capturing fast-moving subjects. </p>
 
-                    </div>
-                </label>
-                <label class="swap swap-flip">
-                    <input type="checkbox" style="opacity:0; position:absolute;" />
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
-                        <h2>Video Games</h2>
-                        <img src="https://picsum.photos/id/96/400/300" class="rounded" />
-                        <p>Price: $600</p>
-                    </div>
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
-                        <p>Video Games</p>
-                        <p class="text-wrap">Video gaming is a popular and diverse hobby that involves playing
-                            electronic games on various platforms, including consoles, PCs, and mobile devices. Overall,
-                            video gaming is a multifaceted hobby that can be both entertaining and enriching. It fosters
-                            creativity, social interaction, and personal growth while providing countless hours of
-                            enjoyment. Whether you prefer solo adventures or multiplayer experiences, there's always
-                            something new to explore in the gaming world!
-                        </p>
+            </div>
+        </label>
+        <label class="swap swap-flip prose">
+            <input type="checkbox" style="opacity:0; position:absolute;" />
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                <h2>Video Games</h2>
+                <img src="https://picsum.photos/id/96/400/300" class="rounded" />
+                <p>Price: $600</p>
+            </div>
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on prose">
+                <p>Video Games</p>
+                <p class="text-wrap">Video gaming is a popular and diverse hobby that involves playing
+                    electronic games on various platforms, including consoles, PCs, and mobile devices. Overall,
+                    video gaming is a multifaceted hobby that can be both entertaining and enriching. It fosters
+                    creativity, social interaction, and personal growth while providing countless hours of
+                    enjoyment. Whether you prefer solo adventures or multiplayer experiences, there's always
+                    something new to explore in the gaming world!
+                </p>
 
-                    </div>
-                </label>
-                <label class="swap swap-flip">
-                    <input type="checkbox" style="opacity:0; position:absolute;" />
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
-                        <h2>Fishing</h2>
-                        <img src="https://picsum.photos/id/124/400/300" class="rounded" />
-                        <p>Price: $300</p>
-                    </div>
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
-                        <p>Fishing</p>
-                        <p class="text-wrap">Fishing is a relaxing and rewarding hobby that involves catching fish for
-                            sport, recreation, or food. It can be enjoyed in various environments, such as freshwater
-                            lakes, rivers, or saltwater oceans.
-                            Getting into fishing can be relatively affordable, but costs can vary widely depending on
-                            your chosen type of fishing and the equipment you want. Ultimately, you can start fishing on
-                            a budget and gradually invest more as you gain experience and find your preferred style.
-                            It’s a flexible hobby that can fit a variety of budgets!
-                        </p>
+            </div>
+        </label>
+        <label class="swap swap-flip prose">
+            <input type="checkbox" style="opacity:0; position:absolute;" />
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                <h2>Fishing</h2>
+                <img src="https://picsum.photos/id/124/400/300" class="rounded" />
+                <p>Price: $300</p>
+            </div>
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on prose">
+                <p>Fishing</p>
+                <p class="text-wrap">Fishing is a relaxing and rewarding hobby that involves catching fish for
+                    sport, recreation, or food. It can be enjoyed in various environments, such as freshwater
+                    lakes, rivers, or saltwater oceans.
+                    Getting into fishing can be relatively affordable, but costs can vary widely depending on
+                    your chosen type of fishing and the equipment you want. Ultimately, you can start fishing on
+                    a budget and gradually invest more as you gain experience and find your preferred style.
+                    It’s a flexible hobby that can fit a variety of budgets!
+                </p>
 
-                    </div>
-                </label>
-                <label class="swap swap-flip">
-                    <input type="checkbox" style="opacity:0; position:absolute;" />
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
-                        <h2>Guitar</h2>
-                        <img src="https://picsum.photos/id/145/400/300" class="rounded" />
-                        <p>Price: $300</p>
-                    </div>
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
-                        <p>Guitar</p>
-                        <p class="text-wrap">Playing guitar is a popular and rewarding hobby that offers both creative
-                            expression and a way to connect with music. Whether you’re a complete beginner or looking to
-                            refine your skills, guitar playing can be enjoyable and fulfilling.
-                            Overall, playing guitar is a versatile and engaging hobby that offers a mix of creativity,
-                            social interaction, and personal growth. Whether you’re strumming along to your favorite
-                            songs or composing your own music, the guitar can be a fulfilling and lifelong passion.</p>
+            </div>
+        </label>
+        <label class="swap swap-flip prose">
+            <input type="checkbox" style="opacity:0; position:absolute;" />
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                <h2>Guitar</h2>
+                <img src="https://picsum.photos/id/145/400/300" class="rounded" />
+                <p>Price: $300</p>
+            </div>
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on prose">
+                <p>Guitar</p>
+                <p class="text-wrap">Playing guitar is a popular and rewarding hobby that offers both creative
+                    expression and a way to connect with music. Whether you’re a complete beginner or looking to
+                    refine your skills, guitar playing can be enjoyable and fulfilling.
+                    Overall, playing guitar is a versatile and engaging hobby that offers a mix of creativity,
+                    social interaction, and personal growth. Whether you’re strumming along to your favorite
+                    songs or composing your own music, the guitar can be a fulfilling and lifelong passion.</p>
 
-                    </div>
-                </label>
-                <label class="swap swap-flip">
-                    <input type="checkbox" style="opacity:0; position:absolute;" />
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
-                        <h2>Gardening</h2>
-                        <img src="https://picsum.photos/id/292/400/300" class="rounded" />
-                        <p>Price: $300</p>
-                    </div>
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
-                        <p>Gardening</p>
-                        <p class="text-wrap">Gardening is a fulfilling and rewarding hobby that involves cultivating
-                            plants, flowers, vegetables, and herbs. It allows individuals to connect with nature,
-                            express creativity, and enjoy the outdoors.
-                            Whether you have a large backyard or just a few pots on a windowsill, gardening can be a
-                            deeply satisfying way to connect with nature and nurture growth.</p>
+            </div>
+        </label>
+        <label class="swap swap-flip prose">
+            <input type="checkbox" style="opacity:0; position:absolute;" />
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                <h2>Gardening</h2>
+                <img src="https://picsum.photos/id/292/400/300" class="rounded" />
+                <p>Price: $300</p>
+            </div>
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on prose">
+                <p>Gardening</p>
+                <p class="text-wrap">Gardening is a fulfilling and rewarding hobby that involves cultivating
+                    plants, flowers, vegetables, and herbs. It allows individuals to connect with nature,
+                    express creativity, and enjoy the outdoors.
+                    Whether you have a large backyard or just a few pots on a windowsill, gardening can be a
+                    deeply satisfying way to connect with nature and nurture growth.</p>
 
-                    </div>
-                </label>
-                <label class="swap swap-flip">
-                    <input type="checkbox" style="opacity:0; position:absolute;" />
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
-                        <h2>Cooking</h2>
-                        <img src="https://picsum.photos/id/400/400/300" class="rounded" />
-                        <p>Price: $300</p>
-                    </div>
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
-                        <p>Cooking</p>
-                        <p class="text-wrap">Cooking is a popular and rewarding hobby that involves preparing food
-                            through various techniques and methods. It’s not just about feeding yourself; it’s an art
-                            form, a science, and a way to express creativity. Getting into cooking as a hobby can be
-                            quite affordable, but costs can vary depending on how you approach it and the equipment you
-                            choose. Ultimately, cooking can be tailored to fit almost any budget. You can start small
-                            and gradually build your kitchen and skills over time, making it a enjoyable hobby!</p>
+            </div>
+        </label>
+        <label class="swap swap-flip prose">
+            <input type="checkbox" style="opacity:0; position:absolute;" />
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                <h2>Cooking</h2>
+                <img src="https://picsum.photos/id/400/400/300" class="rounded" />
+                <p>Price: $300</p>
+            </div>
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on prose">
+                <p>Cooking</p>
+                <p class="text-wrap">Cooking is a popular and rewarding hobby that involves preparing food
+                    through various techniques and methods. It’s not just about feeding yourself; it’s an art
+                    form, a science, and a way to express creativity. Getting into cooking as a hobby can be
+                    quite affordable, but costs can vary depending on how you approach it and the equipment you
+                    choose. Ultimately, cooking can be tailored to fit almost any budget. You can start small
+                    and gradually build your kitchen and skills over time, making it a enjoyable hobby!</p>
 
-                    </div>
-                </label>
-                <label class="swap swap-flip">
-                    <input type="checkbox" style="opacity:0; position:absolute;" />
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
-                        <h2>Bicycling</h2>
-                        <img src="https://picsum.photos/id/409/400/300" class="rounded" />
-                        <p>Price: $300</p>
-                    </div>
-                    <div
-                        class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on">
-                        <p>Bicycling</p>
-                        <p class="text-wrap">Bicycling is a versatile and popular hobby that involves riding bicycles
-                            for leisure, fitness, or transportation. It can be enjoyed solo or with others, and it
-                            offers numerous benefits and experiences.
-                            Overall, bicycling is a dynamic and rewarding hobby that promotes physical health,
-                            environmental consciousness, and social connections. Whether you’re enjoying a leisurely
-                            ride through your neighborhood or tackling challenging trails, cycling can provide a sense
-                            of adventure and fulfillment.</p>
+            </div>
+        </label>
+        <label class="swap swap-flip prose">
+            <input type="checkbox" style="opacity:0; position:absolute;" />
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
+                <h2>Bicycling</h2>
+                <img src="https://picsum.photos/id/409/400/300" class="rounded" />
+                <p>Price: $300</p>
+            </div>
+            <div
+                class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on prose">
+                <p>Bicycling</p>
+                <p class="text-wrap">Bicycling is a versatile and popular hobby that involves riding bicycles
+                    for leisure, fitness, or transportation. It can be enjoyed solo or with others, and it
+                    offers numerous benefits and experiences.
+                    Overall, bicycling is a dynamic and rewarding hobby that promotes physical health,
+                    environmental consciousness, and social connections. Whether you’re enjoying a leisurely
+                    ride through your neighborhood or tackling challenging trails, cycling can provide a sense
+                    of adventure and fulfillment.</p>
 
-                    </div>
-                </label>
-        </section>
+            </div>
+        </label>
     </main>
-    <footer class="footer bg-base-200 text-base-content p-10">
+    <footer class="flex justify-center footer bg-base-200 text-base-content p-10">
         <form>
             <h6 class="footer-title">Sign Up</h6>
             <fieldset class="form-control w-80">
