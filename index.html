@@ -255,16 +255,20 @@
             </div>
         </label>
     </main>
-    <footer class="flex justify-center footer bg-base-200 text-base-content p-10">
+    <footer class="flex justify-center footer bg-base-200 text-base-content pt-10">
         <form>
             <h6 class="footer-title">Sign Up</h6>
             <fieldset class="form-control w-80">
                 <input class="input input-bordered" type="text" id="name" name="name" placeholder="Name" />
                 <input type="text" placeholder="username@site.com" class="input input-bordered" />
-                <button class="btn btn-primary" onclick="my_modal_1.showModal()">Submit</button>
+
             </fieldset>
         </form>
+
     </footer>
+    <div class="flex justify-center bg-base-200">
+        <button class="btn btn-primary w-80" onclick="my_modal_1.showModal()">Submit</button>
+    </div>
     <dialog id="my_modal_1" class="modal">
         <div class="modal-box">
             <p class="py-4">Thank you for signing up with Hobby Hub!</p>
