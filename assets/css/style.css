@@ -1,10 +1,10 @@
 :root {
     --green: #133d35;
     --light: #fff;
+    --hover: oklch(var(--p));
 }
 
 body {
-    display: flex;
     flex-direction: column;
     line-height: 1.5;
     font-size: 16px;
@@ -32,12 +32,13 @@ main {
 }
 
 aside {
-    flex: 1;
+    flex: 0.75;
     padding: 2rem;
     display: flex;
     flex-direction: column;
     border: 5px ridge var(--green);
     border-radius: 30px;
+
 }
 
 section {
@@ -65,4 +66,35 @@ section {
 
 .flex-item.hobby {
     flex: 1 1 45%;
+
+}
+
+.flex-item.hobby:hover {
+    background-color: var(--hover);
+    color: var(--light);
+}
+
+#name {
+    border: 1px solid var(--green);
+}
+
+#email {
+    border: 1px solid var(--green);
+}
+
+#content {
+    border: 1px solid var(--green);
+}
+
+.btn1 {
+    border: 1px solid var(--green);
+    padding: 10px;
+    margin-top: 5px;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal-box {
+    border: 5px dotted var(--green);
 }
