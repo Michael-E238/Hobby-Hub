@@ -1,12 +1,14 @@
-const $ = document.getElementById('$');
-const $$ = document.getElementById('$$');
-const $$$ = document.getElementById('$$$');
-const time1 = document.getElementById('time|');
-// const time2 = document.getElementById('time||');
-// const time3 = document.getElementById('time|||');
-// const indoors = document.getElementById('indoors');
-// const outdoors = document.getElementById('outdoors');
+const $ = document.querySelector('.dollar1');
+const $$ = document.querySelector('.dollar2');
+const $$$ = document.querySelector('.dollar3');
+const time1 = document.querySelector('.time1');
+const time2 = document.querySelector('.time2');
+const time3 = document.querySelector('.time3');
+const indoors = document.querySelector('.indoors');
+const outdoors = document.querySelector('.outdoors');
+const hobby = document.querySelector('.flex-item hobby');
 const submit = document.getElementById('submit');
+
 const hobbyForm = document.getElementById("hobby-form");
 
 hobbyForm.addEventListener('submit', function(event){
@@ -20,13 +22,17 @@ hobbyForm.addEventListener('submit', function(event){
         const element = event.target[index];
         //if checked === true push items to array
         if(element.checked === true){
-            checkedItems.push(element.value)
+            checkedItems.push(element)
         }
-    }
+    } 
+    
+    element.classlist.toggle
+
+
     
     console.log(checkedItems);
 
-    //
+
 });
 
 

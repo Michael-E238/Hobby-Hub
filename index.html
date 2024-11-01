@@ -31,6 +31,39 @@
             </label>
         </nav>
     </header>
+
+
+    <main class="drawer">
+
+            <input id="my-drawer" type="checkbox" class="drawer-toggle" />
+            <div class="drawer-content">
+              <!-- Page content here -->
+              <label for="my-drawer" class="btn btn-primary drawer-button">Open drawer</label>
+            </div>
+            <div class="drawer-side">
+              <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
+              <ul class="menu bg-base-200 text-base-content min-h-full w-80 p-4">
+                <!-- Sidebar content here -->
+                <form id="hobby-form">
+                    <div>
+                        <li> Price Range: </li>
+                            <input type="checkbox" class="dollar3">$
+                            <input type="checkbox" class="dollar2">$$
+                            <input type="checkbox" class="dollar3">$$$
+                        <li> Activity Type: </li>
+                            <input type="checkbox" class="indoors">Indoor
+                            <input type="checkbox" class="outdoors">Outdoor
+                        <li> Commitment: </li>
+                            <input type="checkbox" class="time1" name="time1">⏰
+                            <input type="checkbox" class="time2" name="time2">⏰⏰
+                            <input type="checkbox" class="time3" name="time3">⏰⏰⏰
+                        <li><button type="submit">Submit</button></li>
+                    </div>
+                </form>
+              </ul>
+            </div>
+       
+
     <div class="flex flex-col items-stretch items-center px-2">
         <main>
             <section class="flex justify-center">
