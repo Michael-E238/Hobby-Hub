@@ -9,6 +9,7 @@
         src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
 </head>
 
+
 <body>
     <header class="flex justify-between items-center px-8 h-32 mx-8 mb-6">
         <h1 class="text-2xl"> Hobby Hub </h1>
@@ -210,36 +211,27 @@
                 </label>
         </section>
     </main>
-
-    <footer class="footer footer-center mt-8">
-        <form class="flex">
-            <div class="grid grid-cols-6 grid-rows-2 space-x-4">
-                <input class="input input-bordered w-full max-w-s col-start-3 col-end-3" type="text" id="name"
-                    name="name" placeholder="Name" />
-
-                <input class="input input-bordered w-full max-w-s col-start-4 col-end-4" type="text" id="email"
-                    name="email" placeholder="Email" />
-                <div class="col-start-3 col-end-5">
-                    <textarea class="textarea input-bordered w-full max-w-s"
-                        placeholder="What is on your mind?"></textarea>
-                </div>
-            </div>
+    <footer class="footer bg-base-200 text-base-content p-10">
+        <form>
+            <h6 class="footer-title">Sign Up</h6>
+            <fieldset class="form-control w-80">
+                <input class="input input-bordered" type="text" id="name" name="name" placeholder="Name" />
+                <input type="text" placeholder="username@site.com" class="input input-bordered" />
+                <button class="btn btn-primary" onclick="my_modal_1.showModal()">Submit</button>
+            </fieldset>
         </form>
-        <button class=" btn1 w-full mt-6 mb-8" onclick="my_modal_1.showModal()">Submit</button>
-
-        <dialog id="my_modal_1" class="modal">
-            <div class="modal-box">
-                <p class="py-4">Thank you for signing up with Hobby Hub!</p>
-                <div class="modal-action">
-                    <form method="dialog">
-                        <!-- if there is a button in form, it will close the modal -->
-                        <button class="btn2">Close</button>
-                    </form>
-                </div>
-            </div>
-        </dialog>
     </footer>
-    </div>
+    <dialog id="my_modal_1" class="modal">
+        <div class="modal-box">
+            <p class="py-4">Thank you for signing up with Hobby Hub!</p>
+            <div class="modal-action">
+                <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn2">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
 </body>
 
 </html>
