@@ -68,7 +68,7 @@
         </nav>
     </header>
 
-    <main class="grid gap-10 grid-cols-3 grid-rows-3 items-stretch items-center px-2">
+    <main class="grid gap-10 grid-cols-3 grid-rows-3 items-stretch px-2">
         <label class="swap swap-flip prose">
             <input type="checkbox" style="opacity:0; position:absolute;" />
             <div
@@ -76,7 +76,7 @@
 
                 <h2 class="text-center">Hiking</h2>
                 <img src="https://picsum.photos/seed/picsum/400/300" class="rounded" />
-                <p>Price: $300</p>
+                <p>Price: $220</p>
 
             </div>
             <div
@@ -98,7 +98,7 @@
                 class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
                 <h2>Baseball</h2>
                 <img src="https://picsum.photos/id/73/400/300" class="rounded" />
-                <p>Price: $100</p>
+                <p>Price: $715</p>
             </div>
             <div
                 class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on prose">
@@ -137,7 +137,7 @@
                 class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
                 <h2>Video Games</h2>
                 <img src="https://picsum.photos/id/96/400/300" class="rounded" />
-                <p>Price: $600</p>
+                <p>Price: $915</p>
             </div>
             <div
                 class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on prose">
@@ -158,7 +158,7 @@
                 class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
                 <h2>Fishing</h2>
                 <img src="https://picsum.photos/id/124/400/300" class="rounded" />
-                <p>Price: $300</p>
+                <p>Price: $150</p>
             </div>
             <div
                 class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on prose">
@@ -180,7 +180,7 @@
                 class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
                 <h2>Guitar</h2>
                 <img src="https://picsum.photos/id/145/400/300" class="rounded" />
-                <p>Price: $300</p>
+                <p>Price: $400</p>
             </div>
             <div
                 class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on prose">
@@ -200,7 +200,7 @@
                 class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
                 <h2>Gardening</h2>
                 <img src="https://picsum.photos/id/292/400/300" class="rounded" />
-                <p>Price: $300</p>
+                <p>Price: $500</p>
             </div>
             <div
                 class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-on prose">
@@ -261,18 +261,18 @@
             <fieldset class="form-control w-80">
                 <input class="input input-bordered" type="text" id="name" name="name" placeholder="Name" required />
                 <input type="text" placeholder="username@site.com" id="email" class="input input-bordered" required />
-                <p id="error"></p>
+                <!--<p id="error"></p>-->
 
             </fieldset>
         </form>
 
     </footer>
     <div class="flex justify-center bg-base-200">
-        <button class="btn btn-primary w-80" onclick="my_modal_1.showModal()">Submit</button>
+        <button class="btn btn-primary w-80" id="submitButton" onclick="my_modal_1.showModal()">Submit</button>
     </div>
     <dialog id="my_modal_1" class="modal">
         <div class="modal-box border-dashed border-4 border-green-600">
-            <p class="py-4">Thank you for signing up with Hobby Hub!</p>
+            <p class="py-4"><span id="msg"></span></p>
             <div class="modal-action">
                 <form method="dialog">
                     <!-- if there is a button in form, it will close the modal -->
@@ -281,6 +281,7 @@
             </div>
         </div>
     </dialog>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>

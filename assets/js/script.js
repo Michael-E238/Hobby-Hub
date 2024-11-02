@@ -37,26 +37,56 @@ hobbyForm.addEventListener('submit', function (event) {
 
 //function to make sure all boxes are filled in before submitting, and also adding everything to local storage.
 const footerForm = document.getElementById("footer-form");
-const errorMessage = document.getElementById("error");
+const submitButton = document.getElementById("submitButton");
+const name = document.getElementById("name");
+const email = document.getElementById("email");
+const userName = document.getElementById("userName");
+const msgDiv = document.getElementById("msg");
 
-function FormSubmit(event) {
+formSubmit();
 
+function displayMessage(type, message) {
+    msgDiv.textContent = message;
+    msgDiv.setAttribute("class", type);
+}
+
+function formSubmit() {
+
+
+    const name = localStorage.getItem("name");
+    const email = localStorage.getItem("email");
+    if (!name || !email) return;
+
+    name.textContent = name;
+    msg.textContent = `Thank you for signing up for Hobby Hub, ${name}!`;
+
+
+}
+
+//Added an event listener to the form on submit. Call the function to handle the form submission.
+// footerForm.addEventListener("submit", formSubmit);
+
+submitButton.addEventListener("click", function (event) {
     event.preventDefault();
+
     const name = document.querySelector("#name").value.trim();
     const email = document.querySelector("#email").value.trim();
-    if (!name || !email) {
-        errorMessage.textContent = "Please complete the form.";
+    if (name === "" && email === "") {
+        msg.textContent = "Name and email cannot be blank.";
+    } else if (name === "") {
+        msg.textContent = "Name cannot be blank.";
         return;
-    }
-    const formData = {
-        name,
-        email,
-    };
+    } else if (email === "") {
+        msg.textContent = "Email cannot be blank.";
+        return;
+    } else {
+        msg.textContext = "";
 
-    storeLocalStorage(formData);
-}
-//Added an event listener to the form on submit. Call the function to handle the form submission.
-footerForm.addEventListener("submit", FormSubmit);
+        localStorage.setItem("name", name);
+        localStorage.setItem("email", email);
+        formSubmit();
+    }
+});
 
 
 
