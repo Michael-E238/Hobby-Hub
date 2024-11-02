@@ -49,6 +49,43 @@
         </div>
 
         <nav class="navbar-end">
+    <header class="flex items-center px-8 h-32 mx-8 mb-6">
+
+        <div class="navbar bg-base-100">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost btn-circle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h7" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <!-- Sidebar content here -->
+                        <form id="hobby-form">
+                            <div>
+                                <li> Price Range: </li>
+                                <input type="checkbox" class="dollar3">$
+                                <input type="checkbox" class="dollar2">$$
+                                <input type="checkbox" class="dollar3">$$$
+                                <li> Activity Type: </li>
+                                <input type="checkbox" class="indoors">Indoor
+                                <input type="checkbox" class="outdoors">Outdoor
+                                <li> Commitment: </li>
+                                <input type="checkbox" class="time1" name="time1">⏰
+                                <input type="checkbox" class="time2" name="time2">⏰⏰
+                                <input type="checkbox" class="time3" name="time3">⏰⏰⏰
+                                <li><button type="submit">Submit</button></li>
+                            </div>
+                        </form>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-2xl"> Hobby Hub </div>
+        <nav>
             <label class="swap swap-rotate">
                 <!-- this hidden checkbox controls the state -->
                 <input type="checkbox" class="theme-controller" value="forest" style="opacity:0; position:absolute;" />
