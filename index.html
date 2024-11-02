@@ -23,7 +23,7 @@
                     </svg>
                 </div>
                 <ul tabindex="0"
-                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                    class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow border-double border-2 border-slate-800">
                     <!-- Sidebar content here -->
                     <form id="hobby-form">
                         <div>
@@ -256,11 +256,12 @@
         </label>
     </main>
     <footer class="flex justify-center footer bg-base-200 text-base-content pt-10">
-        <form>
+        <form class="footer-form">
             <h6 class="footer-title">Sign Up</h6>
             <fieldset class="form-control w-80">
-                <input class="input input-bordered" type="text" id="name" name="name" placeholder="Name" />
-                <input type="text" placeholder="username@site.com" class="input input-bordered" />
+                <input class="input input-bordered" type="text" id="name" name="name" placeholder="Name" required />
+                <input type="text" placeholder="username@site.com" id="email" class="input input-bordered" required />
+                <p id="error"></p>
 
             </fieldset>
         </form>
@@ -270,7 +271,7 @@
         <button class="btn btn-primary w-80" onclick="my_modal_1.showModal()">Submit</button>
     </div>
     <dialog id="my_modal_1" class="modal">
-        <div class="modal-box">
+        <div class="modal-box border-dashed border-4 border-green-600">
             <p class="py-4">Thank you for signing up with Hobby Hub!</p>
             <div class="modal-action">
                 <form method="dialog">

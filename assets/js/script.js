@@ -11,29 +11,52 @@ const submit = document.getElementById('submit');
 
 const hobbyForm = document.getElementById("hobby-form");
 
-hobbyForm.addEventListener('submit', function(event){
+hobbyForm.addEventListener('submit', function (event) {
     event.preventDefault();
     console.log(event);
-    
-    const checkedItems =[];
+
+    const checkedItems = [];
     //loop over checked elements
     //for loop
     for (let index = 0; index < event.target.length; index++) {
         const element = event.target[index];
         //if checked === true push items to array
-        if(element.checked === true){
+        if (element.checked === true) {
             checkedItems.push(element)
         }
-    } 
-    
+    }
+
     element.classlist.toggle
 
 
-    
+
     console.log(checkedItems);
 
 
 });
+
+//function to make sure all boxes are filled in before submitting, and also adding everything to local storage.
+const footerForm = document.getElementById("footer-form");
+const errorMessage = document.getElementById("error");
+
+function FormSubmit(event) {
+
+    event.preventDefault();
+    const name = document.querySelector("#name").value.trim();
+    const email = document.querySelector("#email").value.trim();
+    if (!name || !email) {
+        errorMessage.textContent = "Please complete the form.";
+        return;
+    }
+    const formData = {
+        name,
+        email,
+    };
+
+    storeLocalStorage(formData);
+}
+//Added an event listener to the form on submit. Call the function to handle the form submission.
+footerForm.addEventListener("submit", FormSubmit);
 
 
 
