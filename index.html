@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script
         src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+    <script src="./assets/js/script.js" defer></script>
 </head>
 
 <body>
@@ -47,17 +48,17 @@
                 <form id="hobby-form">
                     <div>
                         <li> Price Range: </li>
-                            <input type="checkbox" class="dollar3">$
-                            <input type="checkbox" class="dollar2">$$
-                            <input type="checkbox" class="dollar3">$$$
+                            <input type="checkbox" class="dollar3Toggle">$
+                            <input type="checkbox" class="dollar2Toggle">$$
+                            <input type="checkbox" class="dollar3Toggle">$$$
                         <li> Activity Type: </li>
-                            <input type="checkbox" class="indoors">Indoor
-                            <input type="checkbox" class="outdoors">Outdoor
+                            <input type="checkbox" class="indoorsToggle">Indoor
+                            <input type="checkbox" class="outdoorsToggle">Outdoor
                         <li> Commitment: </li>
-                            <input type="checkbox" class="time1" name="time1">⏰
-                            <input type="checkbox" class="time2" name="time2">⏰⏰
-                            <input type="checkbox" class="time3" name="time3">⏰⏰⏰
-                        <li><button type="submit">Submit</button></li>
+                            <input type="checkbox" class="time1Toggle" name="time1">⏰
+                            <input type="checkbox" class="time2Toggle" name="time2">⏰⏰
+                            <input type="checkbox" class="time3Toggle" name="time3">⏰⏰⏰
+                        <li><input type="submit"></li>
                     </div>
                 </form>
               </ul>
@@ -68,7 +69,7 @@
         <main>
             <section class="flex justify-center">
                 <div class="grid gap-10 grid-cols-3 grid-rows-3">
-                    <label class="swap swap-flip">
+                    <label class="swap swap-flip $">
                         <input type="checkbox" style="opacity:0; position:absolute;" />
                         <div
                             class="py-10 justify-items-center rounded-lg shadow-2xl shadow-indigo-500/50 dark:md:hover:shadow-cyan-500/50 swap-off">
