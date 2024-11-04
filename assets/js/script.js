@@ -1,39 +1,37 @@
-const $ = document.querySelector('.dollar1');
-const $$ = document.querySelector('.dollar2');
-const $$$ = document.querySelector('.dollar3');
-const time1 = document.querySelector('.time1');
-const time2 = document.querySelector('.time2');
-const time3 = document.querySelector('.time3');
-const indoors = document.querySelector('.indoors');
-const outdoors = document.querySelector('.outdoors');
-const hobby = document.querySelector('.flex-item hobby');
-const submit = document.getElementById('submit');
+const items = document.querySelectorAll('.item');
+const checkboxes = document.querySelectorAll('input[type="checkbox"]');
 
-const hobbyForm = document.getElementById("hobby-form");
-
-hobbyForm.addEventListener('submit', function (event) {
-    event.preventDefault();
-    console.log(event);
-
-    const checkedItems = [];
-    //loop over checked elements
-    //for loop
-    for (let index = 0; index < event.target.length; index++) {
-        const element = event.target[index];
-        //if checked === true push items to array
-        if (element.checked === true) {
-            checkedItems.push(element)
-        }
-    }
-
-    element.classlist.toggle
-
-
-
-    console.log(checkedItems);
-
-
+checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', () => {
+        filterItems();
+    });
 });
+
+function filterItems() {
+    const selectedValue = Array.from(document.querySelectorAll('input[name="valued"]:checked')).map(el => el.value);
+    const selectedActivity = Array.from(document.querySelectorAll('input[name="activity"]:checked')).map(el => el.value);
+    const selectedTime = Array.from(document.querySelectorAll('input[name="time"]:checked')).map(el => el.value);
+
+    items.forEach(item => {
+        const itemValue = item.className.split(' ').filter(className => className.startsWith('valued'));
+        const itemActivity = item.className.split(' ').filter(className => className.startsWith('activity'));
+        const itemTime = item.className.split(' ').filter(className => className.startsWith('time'));
+
+        const matchValue = selectedValue.length === 0 || selectedValue.some(valued => itemValue.includes(`valued-${valued}`));
+        const matchActivity = selectedActivity.length === 0 || selectedActivity.some(activity => itemActivity.includes(`activity-${activity}`));
+        const matchTime = selectedTime.length === 0 || selectedTime.some(time => itemTime.includes(`time-${time}`));
+
+        if (matchValue && matchActivity && matchTime) {
+            item.style.display = 'block';
+            console.log(matchActivity);
+        } else {
+            item.style.display = 'none';
+        }
+    });
+}
+
+
+
 
 //function to make sure all boxes are filled in before submitting, and also adding everything to local storage.
 const footerForm = document.getElementById("footer-form");
