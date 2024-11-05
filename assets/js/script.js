@@ -39,14 +39,9 @@ const submitButton = document.getElementById("submitButton");
 const name = document.getElementById("name");
 const email = document.getElementById("email");
 const userName = document.getElementById("userName");
-const msgDiv = document.getElementById("msg");
+const msg = document.getElementById("msg");
 
 formSubmit();
-
-function displayMessage(type, message) {
-    msgDiv.textContent = message;
-    msgDiv.setAttribute("class", type);
-}
 
 function formSubmit() {
 
